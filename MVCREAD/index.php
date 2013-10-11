@@ -1,7 +1,9 @@
 <?php
 // index page
+require_once ('models/db_connection.php');
 require_once('controllers/functions.php');
 include ('models/viewModel.php');
+
 //make a new view
 $views = new viewModel();
 
@@ -10,7 +12,9 @@ $views->getView("views/header.inc");
 
 $get_users = find_all_onions();
 
-echo $get_users;
+while ($row = mysqli_fetch_assoc($get_users)) {
+	echo $row["onionFirstName"] . " " . $row["onionLastName"] . "<br />";
+}
 
 
 //show footer
