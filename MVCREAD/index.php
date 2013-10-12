@@ -11,13 +11,24 @@ $views = new viewModel();
 $views->getView("views/header.inc");
 
 $get_users = find_all_onions();
-
+?>
+<ul>
+<?php
 while ($row = mysqli_fetch_assoc($get_users)) {
-	echo $row["onionFirstName"] . " " . $row["onionLastName"] . "<br />";
+	echo "<li><a href=\"?info=" . $row['onionName'] . "\">" . $row['onionFirstName'] . " " . $row['onionLastName'] . "</a></li>";
 }
 
+?>
 
+</ul>
+<?php
 //show footer
 $views->getView("views/footer.inc");
 
+//<a href="info?=" test['test'] . "\">"Test</a>
+
+//<a href=\"info?="$row['onionName'] "\">" . $row["onionFirstName"] . " " . $row["onionLastName"] . "</a>
+
 ?>
+
+
