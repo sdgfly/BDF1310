@@ -25,9 +25,11 @@ function find_onion_by_id($onion_id){
 
 	global $connection;
 
+	$safe_onion_id = mysqli_real_escape_string($connection, $onion_id);
+
 	$query  = "SELECT * ";
 	$query .= "FROM onion ";
-	$query .= "WHERE onionId = {$onion_id} ";
+	$query .= "WHERE onionId = {$safe_onion_id} ";
 	$query .= "LIMIT 1 ";
 	$onion_set = mysqli_query($connection, $query);
 	
@@ -43,7 +45,7 @@ function find_onion_by_id($onion_id){
 
 
 }
-
+ 
 function find_one_onion($user) {
 
 	global $connection;

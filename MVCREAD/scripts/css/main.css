@@ -48,6 +48,7 @@ nav a:hover{
 	margin: 0 .125em;
 	list-style: none;
 	max-width: 25%;
+	padding: 0;
 }
 
 .user_list a:link {
@@ -67,7 +68,9 @@ nav a:hover{
 .user_details {
 	float: left;
 	max-width: 70%;
-	margin: 0 3em;
+	margin: 0 5em;
+	padding: 0 2.5em;
+	background-color: #bfd3f2;
 }
 
 footer {

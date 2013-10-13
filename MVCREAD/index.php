@@ -10,7 +10,7 @@ $views = new viewModel();
 //Show header here
 $views->getView("views/header.inc");
 
-$views->getView("views/body.inc");
+$views->getView("views/body.inc");   
 
 //show footer
 $views->getView("views/footer.inc");
@@ -19,4 +19,4 @@ $views->getView("views/footer.inc");
 
 ?>
 
-
+         

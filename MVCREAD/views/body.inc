@@ -1,5 +1,5 @@
 <h2>User List</h2>
-<p>Click on a name for details:</p>
+<p>Click on a name for details: </p>
 <ul class="user_list">
 
 
