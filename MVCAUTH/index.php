@@ -7,8 +7,8 @@ include ('models/viewModel.php');
 //make a new view
 $views = new viewModel();
 
-$username = empty($_POST['username']) ? '' : strtolower(trim($_POST['username']));
-$password = empty($_POST['password']) ? '' : trim($_POST['password']);
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $user = null;
 
@@ -17,7 +17,7 @@ if (!empty($_SESSION['userInfo'])) {
 }
 
 if (!empty($username) && !empty($password)) {
-	$user = get_onion_by_username($username, $password);
+	$user = try_login($username, $password);
 	if (is_array($user)) {
 		$contentPage = 'views/success.inc';
 		session_start();

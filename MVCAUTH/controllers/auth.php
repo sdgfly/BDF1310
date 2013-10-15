@@ -14,11 +14,7 @@ function get_onion_by_username($onion_user, $onion_pass){
 	$safe_onion_user = mysqli_real_escape_string($connection, $onion_user);
 	$safe_onion_pass = mysqli_real_escape_string($connection, $onion_pass);
 
-	$query  = "SELECT  ";
-	$query .= "onionId AS id, ";
-	$query .= "onionName AS username, ";
-	$query .= "onionFirstName AS firstname, ";
-	$query .= "onionLastName as lastname ";
+	$query  = "SELECT  * ";
 	$query .= "FROM onion ";
 	$query .= "WHERE onionName = {$safe_onion_user} ";
 	$query .= "AND onionPassword = {$safe_onion_pass} ";
@@ -31,6 +27,13 @@ function get_onion_by_username($onion_user, $onion_pass){
 		return $onion;
 	}else{
 		return null;
+	}
+}
+
+function try_login($username, $password){
+	$user = get_onion_by_username($username, $password);
+	if ($user) {
+		return $user;
 	}
 }
 
