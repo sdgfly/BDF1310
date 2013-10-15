@@ -10,7 +10,7 @@ $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
 //test to see if the database is connected
 if (mysqli_connect_errno()) {
-	die("Database Connection Failed." . 
+	die("Database Connection Issue." . 
 		mysql_connect_error().
 		" (" . mysqli_connect_errno() . ")"
 		);

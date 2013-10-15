@@ -2,14 +2,14 @@
 function confirm_query($result_set){
 
 	if (!$result_set) {
-		die("Database connection failed.");
+		die("Failed to connect to database.");
 	}
 
 }
 
 function get_onion_by_username($onion_user, $onion_pass){
 
-		global $connection;
+	global $connection;
 
 	$safe_onion_user = mysqli_real_escape_string($connection, $onion_user);
 	$safe_onion_pass = mysqli_real_escape_string($connection, $onion_pass);
