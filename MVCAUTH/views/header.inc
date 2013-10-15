@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="author" content="Phillip Moran" />
-<meta name="description" content="Assignment 3.1 MVC Read, Back-End Development and Frameworks, October 2013, Full Sail University Online." />
+<meta name="description" content="Assignment 3.3 MVC Auth, Back-End Development and Frameworks, October 2013, Full Sail University Online." />
 <meta name="keywords" content="MVC, php mvc, MVC Read">
 	<title>Phillip Moran - 3.3 MVC Auth - BDF1310 FSO</title>
 	<link rel="stylesheet" type="text/css" href="scripts/css/main.css" media="screen" />
