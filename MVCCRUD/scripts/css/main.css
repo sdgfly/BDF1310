@@ -11,19 +11,23 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	background-image: url(../../img/bg.jpg);
+	background-repeat: no-repeat;
 }
 
 #wrapper {
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	position: relative;
 	max-width: 1250px;
 	margin: 0 auto;
 	background-color: #fff;
-	overflow: auto;
-	min-height: 100%;
-
+	overflow: hidden;
 }
 
 #header_container { 
-	background-color: #43464b;
+	background-color: #a8acb1;
 	border:1px solid #666;
 	height:80px;
 	left:0;
@@ -33,7 +37,7 @@ body {
 }
 
 header{
-	color: #FFF;
+	color: #414141;
 	width: 1250px;
 	margin: 0 auto;
 }
@@ -73,15 +77,44 @@ nav a:hover{
 	padding: 80px 15px;
 }
 
-form {margin: 200px auto;
+.create_user form {
+	width: 400px;
+
+
+}
+ .create_user input {
+ 	clear: left;
+ 	float: right;
+ 	padding: 0 .5em;
+ 	margin: 0 .5em;
+ }
+
+ .create_user label {
+
+
+ }
+
+ .create_user legend{
+ 	font-family: "Tinet";
+ 	font-size: 1.25em;
+ 	padding-top: .5em;
+ }
+
+ .create_user fieldset {
+ 	border: 0;
+ 	margin: 0;
+ 	padding:.5em;
+ }
+
+.login form {margin: 200px auto;
 	width: 400px;}
 
-form fieldset {
+.login form fieldset {
 	margin: 0;
 	border: 0;	
 }
 
-input {
+.login input {
 	display: inline;
 	float: left;
 	margin: 0 .25em;
@@ -90,7 +123,7 @@ input {
 
 }
 
-.submit_btn {
+.login .submit_btn {
 	
 	color: #414141;
 	background-color:#bfd3f2; 
@@ -98,7 +131,7 @@ input {
 	border: 1px solid #d1d1d1;
 }
 
-.submit_btn:hover {
+.login .submit_btn:hover {
 	color: #FFF;
 	background-color: #2056a6;
 }
@@ -135,7 +168,7 @@ input {
 
 #footer_container { 
 	clear: both; 
-	background-color: #43464b;
+	background-color:#a8acb1;
 	border:1px solid #666;
 	bottom:0;
 	height:80px;
@@ -148,7 +181,7 @@ footer {
 	font-family: 'Tinet';
 	clear: both;
 	bottom: 0;
-	color: #FFF;
+	color: #414141;
 	height: 120px;
 
 }

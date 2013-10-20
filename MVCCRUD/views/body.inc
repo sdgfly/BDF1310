@@ -21,6 +21,7 @@ while ($row = mysqli_fetch_assoc($get_users)) {
  
 ?>
 
+
 </ul>
 
 <?php 
@@ -32,3 +33,22 @@ if (isset($selected_id)) {
 }
 
 ?>
+
+<article class="user_details">
+<form action="?" method="POST" class="create_user">
+<fieldset>
+<legend>Create User</legend>
+<label for="username">Username:</label>
+<input type="text" name="username" value="" maxlength="20" length="20" /><br />
+<label for="password">Password:</label>
+<input type="password" name="password" value="" maxlength="20" length="20"/ ><br />
+<label for="first_name">First Name:</label>
+<input type="text" name="first_name" value="" maxlength="20" length="20" /><br />
+<label for="last_name">Last Name:</label>
+<input type="text" name="last_name" value="" maxlength="20" length="20" /><br />
+<label for="birthday">Birthday:</label>
+<input type="date" name="birthday" /><br />
+<input type="submit" value="Create User" />
+</fieldset>
+</form>
+</article>
