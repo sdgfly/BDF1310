@@ -1,3 +1,8 @@
+<?php
+require_once ('models/db_connection.php');
+require_once('controllers/functions.php');
+
+?>
 <h2>User List</h2>
 <p>Click on a name for details: </p>
 <ul class="user_list">
@@ -31,6 +36,40 @@ if (isset($selected_id)) {
 	echo "<article class=\"user_details\">";
 	echo "<p>Username: " . $current_onion["onionName"] . "<br /> " . "Name: " .  $current_onion["onionFirstName"] ." " . $current_onion["onionLastName"] . "<br /> " . "Current Password: " . $current_onion["onionPassword"] .   "<br />" . "Date of Birth: " .  $current_onion["onionDOB"] . "</p>";
 }
+
+?>
+
+<?php 
+
+if (isset($_POST['submit'])) {
+  // Process the form
+  
+
+    $username = mysql_prep($_POST["username"]);
+    $password = mysql_prep($_POST["password"]);
+    $first_name = mysql_prep($_POST["first_name"]);
+    $last_name = mysql_prep($_POST["last_name"]);
+    $birthday = mysql_prep($_POST["birthday"]);
+   
+    
+    $query  = "INSERT INTO onion (";
+    $query .= "  onionName, onionPassword, onionFirstName, onionLastName, onionDOB ";
+    $query .= ") VALUES (";
+    $query .= "  '{$username}', '{password}', '{first_name}', '{last_name}', '{birthday}' ";
+    $query .= ")";
+    $result = mysqli_query($connection, $query);
+
+     if ($result) {
+      // Success
+      $_SESSION["message"] = "Admin created.";
+
+    } else {
+      // Failure
+      $_SESSION["message"] = "Admin creation failed.";
+    }
+} 
+  
+ // end: if (isset($_POST['submit']))
 
 ?>
 
