@@ -55,18 +55,10 @@ if (isset($_POST['submit'])) {
     $query  = "INSERT INTO onion (";
     $query .= "  onionName, onionPassword, onionFirstName, onionLastName, onionDOB ";
     $query .= ") VALUES (";
-    $query .= "  '{$username}', '{password}', '{first_name}', '{last_name}', '{birthday}' ";
+    $query .= "  '{$username}', '{$password}', '{$first_name}', '{$last_name}', '{$birthday}'";
     $query .= ")";
     $result = mysqli_query($connection, $query);
 
-     if ($result) {
-      // Success
-      $_SESSION["message"] = "Admin created.";
-
-    } else {
-      // Failure
-      $_SESSION["message"] = "Admin creation failed.";
-    }
 } 
   
  // end: if (isset($_POST['submit']))
@@ -87,7 +79,7 @@ if (isset($_POST['submit'])) {
 <input type="text" name="last_name" value="" maxlength="20" length="20" /><br />
 <label for="birthday">Birthday:</label>
 <input type="date" name="birthday" /><br />
-<input type="submit" value="Create User" />
+<input type="submit" name="submit" value="Create User" />
 </fieldset>
 </form>
 </article>
