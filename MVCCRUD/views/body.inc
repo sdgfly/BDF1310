@@ -43,7 +43,8 @@ if (isset($selected_id)) {
 
 if (isset($_POST['submit'])) {
   // Process the form
-  
+	
+	global $connection;  
 
     $username = mysql_prep($_POST["username"]);
     $password = mysql_prep($_POST["password"]);
