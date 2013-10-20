@@ -18,7 +18,9 @@ if (isset($_GET["id"])) {
 }
 
 while ($row = mysqli_fetch_assoc($get_users)) {
-	echo "<li><a href=\"?id=" . $row['onionId'] . "\">" . $row['onionFirstName'] . " " . $row['onionLastName'] . "</a></li>";
+	echo "<li><a href=\"?id=" . $row['onionId'] . "\">" . $row['onionFirstName'] . " " . $row['onionLastName'] . "</a>" . " -- " . "<a href=\" 
+
+  	\">Delete User</a></li>";
 }
  
 
