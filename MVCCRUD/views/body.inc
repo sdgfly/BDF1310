@@ -26,9 +26,8 @@ while ($row = mysqli_fetch_assoc($get_users)) {
 if (isset($_POST['delete'])) {
 
 	global $connection;
-	
-	$id = $row["id"];
-  	$query = "DELETE FROM onion WHERE onionId = {$id} LIMIT 1";
+
+  	$query = "DELETE FROM onion WHERE onionId = {$row['onionId']} LIMIT 1";
   	$result = mysqli_query($connection, $query);
 }
  
