@@ -18,13 +18,19 @@ if (isset($_GET["id"])) {
 }
 
 while ($row = mysqli_fetch_assoc($get_users)) {
-	echo "<li><a href=\"?id=" . $row['onionId'] . "\">" . $row['onionFirstName'] . " " . $row['onionLastName'] . "</a>" . " -- " . "<a href=\" 
-
-  	\">Delete User</a></li>";
+	echo "<li><a href=\"?id=" . $row['onionId'] . "\">" . $row['onionFirstName'] . " " . $row['onionLastName'] . "</a>" . "  " . "<form class=\"inline\" action=\"?\" method=\"POST\"><input class=\"inline\" type=\"submit\" name=\"delete\" 
+	value=\"Delete\" ></form> </li>";
 }
  
 
+if (isset($_POST['delete'])) {
 
+	global $connection;
+	
+	$id = $row["id"];
+  	$query = "DELETE FROM onion WHERE onionId = {$id} LIMIT 1";
+  	$result = mysqli_query($connection, $query);
+}
  
 ?>
 

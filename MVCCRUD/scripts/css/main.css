@@ -100,6 +100,11 @@ nav a:hover{
  	padding-top: .5em;
  }
 
+ .inline {
+ 	display: inline;
+ 	text-decoration: none;
+ }
+
  .create_user fieldset {
  	border: 0;
  	margin: 0;
